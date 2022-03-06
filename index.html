@@ -1,0 +1,156 @@
+<html lang="en" class="h-100">
+
+<!-- Mirrored from bigcatsnfts.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Feb 2022 23:08:28 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/all.min.css">
+<link href="assets/favicon.html" rel="shortcut icon" type="image/x-icon">
+<meta name="theme-color" content="#7952b3">
+<title>Ali & His Frens - Pre-Sale</title>
+<meta name="" content="">
+<meta content="" property="og:title">
+<meta content="" property="og:description">
+<meta content="">
+<meta content="" property="twitter:description">
+<meta property="og:type" content="website">
+<meta content="summary_large_image" name="twitter:card">
+<link href="assets/cover.css" rel="stylesheet">
+<script>
+    const PRICE = 0.075;
+    const TOTAL = 4444;
+    const MAX = 10;
+    const ADDRESS = "0x07b7c3F2b564806Cd75229BBa4b7A6b9D8Fdf65C";
+  </script>
+  <style>
+    /* main.px-3.minter {
+    margin: 0 auto !important;
+    text-align: center !important;
+} */
+  </style>
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark bg-custom font">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<header class="mb-auto">
+<div>
+<img src="assets/logo.gif" class="logo" style="border-radius: 50px; width: 30%; margin-bottom: 20% important;">
+<div class="float-md-start mb-0 logo">
+</div>
+</div>
+</header>
+<main class="px-3 minter">
+<h1>PRESALE IS <span class="outline"> LIVE </span> NOW !</h1>
+<hr>
+<div class="lead nftSelector">
+<div>
+<span class="amountSelector minus fas fa-minus"></span>
+<span class="count">1</span>
+<span class="amountSelector plus fas fa-plus"></span>
+</div>
+<button class="btn-rounded setMax">Set max</button>
+</div>
+<hr>
+<p class="lead basket">
+<span class="color">TOTAL PRICE:</span>
+<span class="totalPrice">0.075/span> ETH
+</p>
+<p class="lead cta">
+<button class="btn-rounded connect" style="display: block;">CONNECT WALLET</button>
+<button class="btn-rounded mint disable" style="display: none;">MINT</button>
+</p>
+<p class="lead basket">
+</p><div class="progr-container">
+<div class="obj3"></div>
+<div class="">
+<div class="prgcont">
+<div class="bar">
+<div class="bar-done" data-done="100" style="width: 70%"></div>
+</div>
+<div class="text-glitch">
+<span  class="number-counter countA" data-count-from="1970" data-count-to="4400" data-count-speed="30">1,984</span>
+<span class="max"> / 4,444</span>
+</div>
+</div>
+</div>
+<div class="obj2"></div>
+</div>
+<p></p>
+</main>
+<footer class="mt-auto text-white-50">
+<p class="social-links">
+<a href="" target="_blank"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+<a href="https://twitter.com/0xalinft" target="_blank"><i aria-hidden="true" class="fab fa-twitter"></i></a>
+<a href="https://discord.gg/5qB6DcUC" target="_blank"><i aria-hidden="true" class="fab fa-discord"></i></a>
+</p>
+</footer>
+</div>
+<div class="modal fade myModal" id="metaMaskModal" tabindex="-1" role="dialog" aria-labelledby="metaMaskModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<p class="lead info">METAMASK NEEDED</p>
+<img width="90" alt="MetaMask Fox" src="assets/512px-MetaMask_Fox.svg.png">
+<p class="lead info">Please install <a href="https://metamask.io/download.html" target="_blank">MetaMask</a>
+to connect your wallet.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade myModal" id="mintingModal" tabindex="-1" role="dialog" aria-labelledby="mintingModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<p class="lead info">THANK YOU FOR YOUR SUPPORT</p>
+<span class="purchased far fa-check-circle"></span>
+<p class="lead info">NTFs will been appeared in your ethereum wallet after project launched.</p>
+</div>
+</div>
+</div>
+</div>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+
+ <script>
+   $(document).ready(function(){
+    (function($) {
+  $.fn.countTo = function(options) {
+    return this.each(function() {
+      //-- Arrange
+      var FRAME_RATE = 140; // Predefine default frame rate to be 60fps
+      var $el = $(this);
+      var countFrom = parseInt($el.attr('data-count-from'));
+      var countTo = parseInt($el.attr('data-count-to'));
+      var countSpeed = $el.attr('data-count-speed'); // Number increment per second
+
+      //-- Action
+      var rafId;
+      var increment;
+      var currentCount = countFrom;
+      var countAction = function() {              // Self looping local function via requestAnimationFrame
+        if(currentCount < countTo) {              // Perform number incremeant
+          $el.text(Math.floor(currentCount));     // Update HTML display
+          increment = countSpeed / FRAME_RATE;    // Calculate increment step
+          currentCount += increment;              // Increment counter
+          rafId = requestAnimationFrame(countAction);
+        } else {                                  // Terminate animation once it reaches the target count number
+          $el.text(countTo);                      // Set to the final value before everything stops
+          //cancelAnimationFrame(rafId);
+        }
+      };
+      rafId = requestAnimationFrame(countAction); // Initiates the looping function
+    });
+  };
+}(jQuery));
+
+//-- Executing
+$('.number-counter').countTo();
+    
+});
+
+ </script>
+</body>
+ 
+<!-- Mirrored from bigcatsnfts.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Feb 2022 23:08:30 GMT -->
+</html>
